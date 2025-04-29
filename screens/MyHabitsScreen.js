@@ -136,7 +136,7 @@ export default function MyHabitsScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#F7FFF7',
     padding: 20,
   },
   header: {
@@ -161,9 +161,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     padding: 15,
-    backgroundColor: '#f8f9fa',
+    backgroundColor: '#FFFFFF',
     borderRadius: 8,
     marginBottom: 10,
+    borderWidth: 1,
+    borderColor: '#FFE66D',
   },
   inactiveHabit: {
     opacity: 0.6,
@@ -175,15 +177,16 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     marginBottom: 4,
+    color: '#2D3047',
   },
   habitDetails: {
     fontSize: 14,
-    color: '#666',
+    color: '#2D3047',
     marginBottom: 4,
   },
   habitDescription: {
     fontSize: 14,
-    color: '#666',
+    color: '#2D3047',
   },
   habitActions: {
     flexDirection: 'row',
@@ -203,7 +206,7 @@ const styles = StyleSheet.create({
   loading: {
     textAlign: 'center',
     marginTop: 20,
-    color: '#666',
+    color: '#2D3047',
   },
   emptyState: {
     flex: 1,
@@ -213,7 +216,7 @@ const styles = StyleSheet.create({
   },
   emptyStateText: {
     textAlign: 'center',
-    color: '#666',
+    color: '#2D3047',
     fontSize: 16,
     marginBottom: 20,
   },

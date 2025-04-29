@@ -14,6 +14,7 @@ import HomeScreen from './screens/HomeScreen';
 import MyHabitsScreen from './screens/MyHabitsScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import AddHabitScreen from './screens/AddHabitScreen';
+import DailyChallengeScreen from './screens/DailyChallengeScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -106,6 +107,13 @@ export default function App() {
               options={{
                 animation: 'slide_from_right',
                 presentation: 'modal',
+              }}
+            />
+            <Stack.Screen 
+              name="DailyChallenge" 
+              component={DailyChallengeScreen}
+              options={{
+                animation: 'slide_from_right',
               }}
             />
           </>

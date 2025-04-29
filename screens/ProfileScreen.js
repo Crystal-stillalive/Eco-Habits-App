@@ -293,8 +293,8 @@ export default function ProfileScreen({ navigation }) {
             </TouchableOpacity>
           )}
         </View>
-        <TouchableOpacity style={{margin: 20, backgroundColor: '#e74c3c', padding: 15, borderRadius: 8}} onPress={handleLogout}>
-          <Text style={{color: '#fff', textAlign: 'center', fontWeight: 'bold'}}>Log Out</Text>
+        <TouchableOpacity style={styles.logoutButton} onPress={handleLogout}>
+          <Text style={styles.logoutButtonText}>Log Out</Text>
         </TouchableOpacity>
       </ScrollView>
     </View>
@@ -304,12 +304,12 @@ export default function ProfileScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#F7FFF7',
   },
   header: {
     padding: 20,
     borderBottomWidth: 1,
-    borderBottomColor: '#eee',
+    borderBottomColor: '#FFE66D',
   },
   title: {
     fontSize: 24,
@@ -352,7 +352,8 @@ const styles = StyleSheet.create({
     width: '80%',
     height: 40,
     borderWidth: 1,
-    borderColor: '#ddd',
+    borderColor: '#FFE66D',
+    backgroundColor: '#FFFFFF',
     borderRadius: 8,
     paddingHorizontal: 10,
     marginBottom: 10,
@@ -387,13 +388,15 @@ const styles = StyleSheet.create({
   },
   email: {
     fontSize: 16,
-    color: '#666',
+    color: '#2D3047',
   },
   section: {
-    backgroundColor: '#f8f9fa',
+    backgroundColor: '#FFFFFF',
     borderRadius: 12,
     overflow: 'hidden',
     margin: 20,
+    borderWidth: 1,
+    borderColor: '#FFE66D',
   },
   menuItem: {
     flexDirection: 'row',
@@ -404,6 +407,7 @@ const styles = StyleSheet.create({
     flex: 1,
     fontSize: 16,
     marginLeft: 15,
+    color: '#2D3047',
   },
   passwordForm: {
     padding: 15,
@@ -412,12 +416,13 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     marginBottom: 15,
-    color: '#333',
+    color: '#2D3047',
   },
   input: {
     height: 50,
     borderWidth: 1,
-    borderColor: '#ddd',
+    borderColor: '#FFE66D',
+    backgroundColor: '#FFFFFF',
     borderRadius: 8,
     paddingHorizontal: 15,
     marginBottom: 15,
@@ -445,5 +450,16 @@ const styles = StyleSheet.create({
     color: '#e74c3c',
     fontSize: 14,
     marginBottom: 10,
+  },
+  logoutButton: {
+    margin: 20,
+    backgroundColor: '#2ecc71',
+    padding: 15,
+    borderRadius: 8,
+  },
+  logoutButtonText: {
+    color: '#fff',
+    textAlign: 'center',
+    fontWeight: 'bold',
   },
 }); 

@@ -165,7 +165,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     padding: 20,
-    backgroundColor: '#fff',
+    backgroundColor: '#F7FFF7',
   },
   title: {
     fontSize: 32,
@@ -178,7 +178,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     textAlign: 'center',
     marginBottom: 30,
-    color: '#666',
+    color: '#2D3047',
   },
   inputContainer: {
     marginBottom: 15,
@@ -186,7 +186,8 @@ const styles = StyleSheet.create({
   input: {
     height: 50,
     borderWidth: 1,
-    borderColor: '#ddd',
+    borderColor: '#FFE66D',
+    backgroundColor: '#FFFFFF',
     borderRadius: 8,
     paddingHorizontal: 15,
     fontSize: 16,

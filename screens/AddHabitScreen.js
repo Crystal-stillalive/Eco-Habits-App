@@ -180,7 +180,7 @@ export default function AddHabitScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#F7FFF7',
     padding: 20,
   },
   title: {
@@ -195,12 +195,13 @@ const styles = StyleSheet.create({
   label: {
     fontSize: 16,
     marginBottom: 8,
-    color: '#333',
+    color: '#2D3047',
   },
   input: {
     height: 50,
     borderWidth: 1,
-    borderColor: '#ddd',
+    borderColor: '#FFE66D',
+    backgroundColor: '#FFFFFF',
     borderRadius: 8,
     paddingHorizontal: 15,
     fontSize: 16,
@@ -212,9 +213,10 @@ const styles = StyleSheet.create({
   },
   pickerContainer: {
     borderWidth: 1,
-    borderColor: '#ddd',
+    borderColor: '#FFE66D',
     borderRadius: 8,
     overflow: 'hidden',
+    backgroundColor: '#FFFFFF',
   },
   picker: {
     height: 50,
