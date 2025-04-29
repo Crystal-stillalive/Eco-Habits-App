@@ -1,0 +1,37 @@
+{
+  "expo": {
+    "name": "Eco-Habits-App",
+    "slug": "eco-habits-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/eh.png",
+    "splash": {
+      "image": "./assets/eh.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/eh.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "web": {
+      "favicon": "./assets/eh.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "a2387405-6ab0-499b-a68a-2a05f902fba7"
+      }
+    }
+  }
+}
