@@ -23,7 +23,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/eh.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.crystalkim.ecohabitsapp"
     },
     "web": {
       "favicon": "./assets/eh.png"
