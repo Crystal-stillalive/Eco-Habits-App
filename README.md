@@ -15,7 +15,7 @@ A simple, interactive mobile app that helps users build and maintain eco-friendl
 
 ### 🔄 Backup APK  
 If the direct link expires, download the APK from the GitHub release:  
-🔗 [**Backup APK – GitHub Release v1.0**](application-745d62dc-97dd-47f2-8228-e5f0d8239815.apk)
+🔗 [**Backup APK – GitHub Release v1.0**](https://github.com/Crystal-stillalive/Eco-Habits-App/releases/tag/pre-release)
 
 ---
 
