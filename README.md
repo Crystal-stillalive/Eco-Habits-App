@@ -1,89 +1,121 @@
-# Eco Habits App 🌱
+# Eco Habits App 🌱  
+A simple, interactive mobile app that helps users build and maintain eco-friendly habits through daily challenges, visual tracking, and personalized profiles.
 
-A React Native mobile application that helps users track and maintain eco-friendly habits. Built with Expo and Firebase, this app encourages sustainable living through daily challenges and habit tracking.
+---
 
-## Features
+## 📦 Installation  
 
-- **User Authentication**
-  - Secure email/password login
-  - Profile management
-  - Password reset functionality
+### 📥 Download the APK  
+- [**Click here to download the Eco Habits APK**](https://expo.dev/accounts/crystalkim/projects/eco-habits-app/builds/745d62dc-97dd-47f2-8228-e5f0d8239815)
 
-- **Habit Tracking**
-  - Create and manage eco-friendly habits
-  - Set custom frequencies (daily/weekly/monthly)
-  - Track progress and completion
-  - Categorize habits (energy, water, waste, etc.)
+### 📁 Install on Android:
+1. Locate the downloaded APK using your File Manager.  
+2. Enable **“Install from unknown sources”** if prompted.  
+3. Tap **Install** to proceed.
 
-- **Daily Challenges**
-  - New environmental challenge every day
-  - Detailed impact information
-  - Practical tips for completion
-  - Progress tracking
+### 🔄 Backup APK  
+If the direct link expires, download the APK from the GitHub release:  
+🔗 [**Backup APK – GitHub Release v1.0**](application-745d62dc-97dd-47f2-8228-e5f0d8239815.apk)
 
-- **Eco Tips & Facts**
-  - Daily eco tips
-  - Environmental impact facts
-  - Educational content
+---
 
-- **Profile Management**
-  - Custom profile picture
-  - Display name customization
-  - Password management
-  - Progress statistics
+## 👩‍💻 Developer Info  
+- **Name:** Pyae Shunn Le Maung
+- **Student ID:** 6631503081  
+- **Framework:** React Native (Expo)  
+- **Backend:** Firebase (Auth, Firestore, Storage)  
+- **GitHub Repo:** [Eco Habits App](https://github.com/Crystal-stillalive/Eco-Habits-App.git)
 
-## Tech Stack
+---
 
-- **Frontend**
-  - React Native
-  - Expo
-  - React Navigation
-  - React Native Chart Kit
+## 🧠 App Concept and Design  
 
-- **Backend**
-  - Firebase Authentication
-  - Firestore Database
-  - Firebase Storage
+### 🎯 User Personas
+- **Emily (Age 24)** – Wants to build eco-friendly habits to reduce carbon footprint.
+- **Lucus (Age 29)** – Needs a simple way to track eco-friendly behavior and stay motivated.  
 
-## Prerequisites
+### ✅ App Goals
+- Help users build and maintain eco-friendly habits such as recycling and using public transport  
+- Track daily activities related to environmental sustainability  
+- Provide tips and daily challenges for sustainable living   
 
-- Node.js (v14 or later)
-- npm or yarn
-- Expo CLI
-- Firebase account
-- iOS Simulator (for Mac users) or Android Emulator
+---
 
-## Setup
+## 🌟 Key Features  
+- 🔐 **User Authentication** – Secure login/signup, password reset  
+- ✅ **Habit Tracking** – Create custom eco habits with frequencies  
+- 📆 **Daily Challenges** – Auto-generated, trackable green tasks  
+- 💡 **Eco Tips & Facts** – Daily education for sustainable living  
+- 👤 **Profile Management** – Display name, avatar  
 
-1. Clone the repository:
+---
+
+## 🔁 User Flow Summary  
+Open app > Login/Sign up > 
+Go to Dashboard > View habits, challenges, and tips > 
+Tap "Add New Habit" > Set goal (daily/weekly/monthly) > 
+Tap "View Challenge" > Complete challenge > 
+Change name, password or profile picture in Profile > Log out
+
+---
+
+## 🧰 Tech Stack  
+
+### Frontend
+- React Native (Expo)  
+- React Navigation  
+- React Native Chart Kit  
+
+### Backend
+- Firebase Auth  
+- Firestore  
+- Firebase Storage  
+
+---
+
+## 🛠 Setup & Configuration  
+
+### Prerequisites
+- Node.js v14+  
+- npm / yarn  
+- Expo CLI  
+- Firebase account  
+
+### 🔧 Setup Steps
 ```bash
-git clone <repository-url>
+git clone https://github.com/Crystal-stillalive/Eco-Habits-App.git
 cd eco-habits-app
-```
-
-2. Install dependencies:
-```bash
 npm install
-```
-
-3. Set up Firebase:
-   - Create a new Firebase project at [Firebase Console](https://console.firebase.google.com/)
-   - Enable Email/Password authentication
-   - Create a new web app and get your Firebase configuration
-   - Replace the Firebase configuration in `firebase.js` with your own
-
-4. Start the development server:
-```bash
 npx expo start
 ```
 
-5. Run on your device:
-   - Install the Expo Go app on your mobile device
-   - Scan the QR code with your device's camera
-   - Or press 'i' for iOS simulator or 'a' for Android emulator
+Then:
+- Setup Firebase project at [Firebase Console](https://console.firebase.google.com/)
+- Enable **Email/Password** Auth
+- Add Firebase config to `firebase.js`
 
-## Project Structure
+---
 
+## 🔐 Firebase Security Rules  
+
+```js
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+
+      match /habits/{habitId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+    }
+  }
+}
+```
+
+---
+
+## 🧾 Project Structure  
 ```
 eco-habits-app/
 ├── assets/              # App assets and images
@@ -105,75 +137,56 @@ eco-habits-app/
 └── package.json        # Dependencies and scripts
 ```
 
-## App Configuration
+---
 
-The app uses Expo's configuration system defined in `app.json`. Key configurations include:
+## 🔢 Scripts & Dependencies  
 
-- App name: "Eco-Habits-App"
-- Version: 1.0.0
-- Orientation: Portrait
-- Icons and splash screen
-- Platform-specific configurations for iOS and Android
+### Common Scripts
+- `npm start` – Start development server  
+- `npm run android` – Run on Android  
+- `npm run ios` – Run on iOS  
+- `npm run web` – Run in browser  
 
-## Firebase Configuration
+### Key Libraries
+- `@react-navigation/native`  
+- `@react-navigation/bottom-tabs`  
+- `react-native-chart-kit`  
+- `expo-image-picker`  
+- `firebase`
 
-1. Create a new Firebase project
-2. Enable Authentication:
-   - Go to Authentication > Sign-in method
-   - Enable Email/Password authentication
-3. Set up Firestore:
-   - Go to Firestore Database
-   - Create a new database
-   - Set up security rules (see below)
+---
 
-### Firestore Security Rules
+## 🖼 Screenshots  
+Here’s a preview of the Eco Habits App UI:
 
-```javascript
-rules_version = '2';
-service cloud.firestore {
-  match /databases/{database}/documents {
-    match /users/{userId} {
-      allow read, write: if request.auth != null && request.auth.uid == userId;
-      
-      match /habits/{habitId} {
-        allow read, write: if request.auth != null && request.auth.uid == userId;
-      }
-    }
-  }
-}
-```
+- **Login Page**  
+  <img src="https://i.imgur.com/5QoK31V.png" alt="Login" width="150"/>
 
-## Development
+- **Sign Up Page**  
+  <img src="https://i.imgur.com/q2ihfh0.png" alt="Sign Up" width="150"/>
 
-### Available Scripts
+- **Home Page**  
+  <img src="https://i.imgur.com/38L27JA.png" alt="Home" width="150"/>
 
-- `npm start` - Start the Expo development server
-- `npm run android` - Start the app on Android
-- `npm run ios` - Start the app on iOS
-- `npm run web` - Start the app in web browser
+- **Daily Challenge Page**  
+  <img src="https://i.imgur.com/iwWz8w8.png" alt="Challenge" width="150"/>
 
-### Dependencies
+- **My Eco Habits Page**  
+  <img src="https://i.imgur.com/GdCcw1y.png" alt="Habits" width="150"/>
 
-Key dependencies include:
-- @react-navigation/native
-- @react-navigation/bottom-tabs
-- @react-native-picker/picker
-- firebase
-- expo-image-picker
-- react-native-chart-kit
+- **Add New Habit Page**  
+  <img src="https://i.imgur.com/xp7tjiu.png" alt="Add Habit" width="150"/>
 
-## Contributing
+- **Profile Page**  
+  <img src="https://i.imgur.com/aUPPBGl.png" alt="Profile" width="150"/>
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+---
 
-## License
+## 🚀 Deployment Info  
+- **Build Type:** Release  
+- **Tested On:** Android  
+- **Install Method:** Manual APK installation  
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+---
 
-## Contact
-
-For any questions or suggestions, please open an issue in the repository. 
+Let me know if you'd like this exported as a Markdown `.md` file or need help linking the actual GitHub release page or repo URL.
