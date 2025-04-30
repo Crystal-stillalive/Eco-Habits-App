@@ -188,5 +188,3 @@ Here’s a preview of the Eco Habits App UI:
 - **Install Method:** Manual APK installation  
 
 ---
-
-Let me know if you'd like this exported as a Markdown `.md` file or need help linking the actual GitHub release page or repo URL.
